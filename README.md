@@ -114,9 +114,14 @@ Ao iniciar o projeto, um seed inicial de 10 clientes significativos será inseri
      
 ## Endpoints
 ![img_1.png](img/img_1.png)
+- GET **/clients**: Busca paginada de clientes.
+- GET **/clients/{id}**: Busca um cliente por ID.
+- POST **/clients**: Insere um novo cliente.
+- PUT **/clients/{id}**: Atualiza um cliente existente.
+- DELETE **/clients/{id}**: Deleta um cliente.
 
 ## Deploy no Render
-##### O deploy foi feito na plataforma Render. Seguem os passos principais que foram utilizados para fazer o deploy da aplicação:
+1. **O deploy foi feito na plataforma Render. Seguem os passos principais que foram utilizados para fazer o deploy da aplicação:**
 
 - Criar um repositório no GitHub ou GitLab: O código da API foi versionado no GitHub.
 - Conectar o repositório ao Render: No painel do Render, conectei o repositório ao serviço para que ele pudesse ser automaticamente atualizado a cada novo push.
