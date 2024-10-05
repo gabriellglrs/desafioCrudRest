@@ -16,6 +16,8 @@ Este projeto implementa um CRUD completo de clientes usando Spring Boot 3.3.4 e 
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" height="50" alt="spring logo"  />
   <img width="50" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" height="50" alt="postgresql logo"  />
+  <img width="50" />
+   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original-wordmark.svg" height="60" alt="postgresql logo" />
 </div>
 <br>
 
@@ -23,6 +25,10 @@ Este projeto implementa um CRUD completo de clientes usando Spring Boot 3.3.4 e 
 - **Maven:**  Gerenciamento de dependências e build.
 - **PostgreSQL:**  Banco de dados relacional.
 - **Hibernate:**  ORM para comunicação com o banco de dados.
+- **Docker:** O Dockerfile foi configurado para rodar a aplicação com as seguintes etapas:
+  - Usa a imagem base do OpenJDK.
+  - Copia o código da aplicação.
+  - Executa o comando para iniciar a API.
 
 ## Funcionalidades
 
@@ -98,15 +104,24 @@ Ao iniciar o projeto, um seed inicial de 10 clientes significativos será inseri
    mvn spring-boot:run
    ````
    - A aplicação estará disponível em http://localhost:8080.
+
+## Deploy da API
+1. A API foi implantada no serviço Render e está disponível no seguinte link: 
+  - https://desafiocrudrest-api.onrender.com
+
+## Como acessar a API
+2. Você pode acessar a API REST em produção através do link acima. Abaixo estão alguns exemplos de endpoints disponíveis:
      
 ## Endpoints
 ![img_1.png](img/img_1.png)
 
-- GET /clients: Busca paginada de clientes.
-- GET /clients/{id}: Busca um cliente por ID.
-- POST /clients: Insere um novo cliente.
-- PUT /clients/{id}: Atualiza um cliente existente.
- - DELETE /clients/{id}: Deleta um cliente.
+## Deploy no Render
+##### O deploy foi feito na plataforma Render. Seguem os passos principais que foram utilizados para fazer o deploy da aplicação:
+
+- Criar um repositório no GitHub ou GitLab: O código da API foi versionado no GitHub.
+- Conectar o repositório ao Render: No painel do Render, conectei o repositório ao serviço para que ele pudesse ser automaticamente atualizado a cada novo push.
+- Configurar o Docker: A aplicação foi configurada para ser executada em um container Docker, usando o Dockerfile presente no projeto.
+- Deploy automático: Sempre que há uma atualização no repositório, o Render faz o build e deploy automaticamente.
 
 ## Autor
 **Desenvolvido por Gabriel Lucas Rodrigues Souza** como parte do curso Formação Desenvolvedor Moderno da DevSuperior.
