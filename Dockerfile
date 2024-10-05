@@ -1,8 +1,12 @@
-FROM maven:3.9.4-openjdk-21 AS build
+# Use a more recent Maven image with OpenJDK
+FROM maven:3.9.5-eclipse-temurin-21 AS build
+
 COPY . .
 RUN mvn clean package -DskipTests
 
-FROM openjdk:21-jdk-slim
-COPY --from=build /build/target/desafioCrudRest-0.0.1-SNAPSHOT.jar desafioCrudRest-0.0.1-SNAPSHOT.jar
-EXPOSE 8080
-ENTRYPOINT ["java","-jar","desafioCrudRest-0.0.1-SNAPSHOT.jar"]
+# Use OpenJDK for the runtime stage
+FROM eclipse-temurin:21-jre-jammy
+
+COPY --from=build /target/*.jar app.jar
+
+ENTRYPOINT ["java", "-jar", "/app.jar"]
