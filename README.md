@@ -107,7 +107,7 @@ Ao iniciar o projeto, um seed inicial de 10 clientes significativos será inseri
 
 ## Deploy da API
 1. A API foi implantada no serviço Render e está disponível no seguinte link: 
-  - https://desafiocrudrest-api.onrender.com
+  - https://desafio-crud-rest-api-render.onrender.com/
 
 ## Como acessar a API
 2. Você pode acessar a API REST em produção através do link acima. Abaixo estão alguns exemplos de endpoints disponíveis:
