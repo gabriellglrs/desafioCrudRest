@@ -1,4 +1,4 @@
-package com.spring.desafiocrudrest.dtos;
+package com.spring.desafiocrudrest.DTO;
 
 import com.spring.desafiocrudrest.entities.ClientEntity;
 import jakarta.validation.constraints.NotBlank;

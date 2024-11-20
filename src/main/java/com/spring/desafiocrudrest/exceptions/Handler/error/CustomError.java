@@ -1,4 +1,4 @@
-package com.spring.desafiocrudrest.dtos;
+package com.spring.desafiocrudrest.exceptions.Handler.error;
 
 import lombok.Getter;
 import lombok.Setter;

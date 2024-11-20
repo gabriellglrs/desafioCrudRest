@@ -1,6 +1,6 @@
 package com.spring.desafiocrudrest.controllers;
 
-import com.spring.desafiocrudrest.dtos.ClientDto;
+import com.spring.desafiocrudrest.DTO.ClientDto;
 import com.spring.desafiocrudrest.services.ClientService;
 import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;

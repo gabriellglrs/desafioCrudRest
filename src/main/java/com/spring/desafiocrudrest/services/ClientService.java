@@ -1,6 +1,6 @@
 package com.spring.desafiocrudrest.services;
 
-import com.spring.desafiocrudrest.dtos.ClientDto;
+import com.spring.desafiocrudrest.DTO.ClientDto;
 import com.spring.desafiocrudrest.entities.ClientEntity;
 import com.spring.desafiocrudrest.exceptions.DatabaseException;
 import com.spring.desafiocrudrest.exceptions.ResourceNotFoundException;
@@ -12,8 +12,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.util.Optional;
 
 @Service
 public class ClientService {

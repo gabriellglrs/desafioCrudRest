@@ -1,14 +1,21 @@
-# Use a more recent Maven image with OpenJDK
-FROM maven:3.9.5-eclipse-temurin-21 AS build
+# Etapa de build
+FROM ubuntu:latest AS build
+
+RUN apt-get update
+RUN apt-get install openjdk-21-jdk -y
+RUN apt-get install maven -y
 
 COPY . .
-RUN mvn clean package -DskipTests
 
-# Use OpenJDK for the runtime stage
-FROM eclipse-temurin:21-jre-jammy
+RUN mvn clean install
 
-COPY --from=build /target/*.jar app.jar
+# Etapa final
+FROM openjdk:21-jdk-slim
 
 EXPOSE 8080
 
+COPY --from=build /target/*.jar app.jar
+
 ENTRYPOINT ["java", "-jar", "/app.jar"]
+
+

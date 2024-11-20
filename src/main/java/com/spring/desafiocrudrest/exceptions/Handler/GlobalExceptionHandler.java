@@ -1,8 +1,9 @@
-package com.spring.desafiocrudrest.exceptions;
+package com.spring.desafiocrudrest.exceptions.Handler;
 
-import com.spring.desafiocrudrest.dtos.CustomError;
-import com.spring.desafiocrudrest.dtos.FieldMessage;
-import com.spring.desafiocrudrest.dtos.ValidationError;
+import com.spring.desafiocrudrest.exceptions.Handler.error.CustomError;
+import com.spring.desafiocrudrest.exceptions.Handler.error.ValidationError;
+import com.spring.desafiocrudrest.exceptions.DatabaseException;
+import com.spring.desafiocrudrest.exceptions.ResourceNotFoundException;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,4 +1,4 @@
-package com.spring.desafiocrudrest.dtos;
+package com.spring.desafiocrudrest.exceptions.Handler.error;
 
 import lombok.Builder;
 import lombok.Getter;
@@ -12,9 +12,9 @@ import java.util.List;
 public class ValidationError extends CustomError {
 
      @Builder.Default
-     private List<FieldMessage> errors = new ArrayList<>();
+     private List<FieldMessageError> errors = new ArrayList<>();
 
      public void addError(String fieldName, String message) {
-          errors.add(new FieldMessage(fieldName, message));
+          errors.add(new FieldMessageError(fieldName, message));
      }
 }
