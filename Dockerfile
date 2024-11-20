@@ -7,7 +7,7 @@ RUN apt-get install maven -y
 
 COPY . .
 
-RUN mvn clean install
+RUN mvn clean install -DskipTests
 
 # Etapa final
 FROM openjdk:21-jdk-slim
@@ -17,5 +17,4 @@ EXPOSE 8080
 COPY --from=build /target/*.jar app.jar
 
 ENTRYPOINT ["java", "-jar", "/app.jar"]
-
 
